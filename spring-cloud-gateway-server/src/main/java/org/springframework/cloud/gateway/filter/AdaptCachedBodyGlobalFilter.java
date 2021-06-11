@@ -55,7 +55,6 @@ public class AdaptCachedBodyGlobalFilter implements GlobalFilter, Ordered, Appli
 			return chain.filter(exchange.mutate().request(cachedRequest).build());
 		}
 
-		//
 		DataBuffer body = exchange.getAttributeOrDefault(CACHED_REQUEST_BODY_ATTR, null);
 		Route route = exchange.getAttribute(GATEWAY_ROUTE_ATTR);
 
